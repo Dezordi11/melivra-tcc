@@ -1,0 +1,56 @@
+	body {
+	  padding: 0px;
+	  margin: 0px;
+	}
+	.navbar-brand{
+		width:105px;
+		height:40px;
+		margin-left: 8px;
+	}
+	.navbar.navbar-expand-md{background-color: darkorange;
+		margin:0px;
+		padding:1px;}
+	.nav-link{
+		color:white;
+	}
+	.nav-link:hover{
+		background-color: white;
+	}
+	.navbar-collapse{
+		justify-content: flex-end;
+	}
+	.header {
+	  z-index:1;
+	  background-image: url('../Imagens/foto-telainicial.jpg');
+	  background-size: cover;
+	  background-position: center;
+	  position: relative;
+	}
+	.texto h1{
+		color: white;
+		margin-top: 45px;
+		margin-bottom: 35px;
+		font-size:65px;
+		text-shadow: 2px 2px #999991;
+	}
+	.texto{z-index:1;
+		float:right;
+		margin-right: 3.5%;
+		text-align: right;
+	}
+	.texto a{
+			background-color: darkorange;
+			color:white;
+			z-index: 100;
+	}
+    .overlay {
+      position: absolute;
+      min-height: 100%;
+      min-width: 100%;
+      left: 0;
+      top: 0;
+      background-image: linear-gradient(180deg, darkorange,rgba(0,0,120,0.5));
+      opacity: 0.6;
+      z-index: -1;
+    }
+

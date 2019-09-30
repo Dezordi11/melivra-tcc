@@ -1,0 +1,57 @@
+	body {
+	  padding: 0px;
+	  margin: 0px;
+	}
+	.navbar-brand{
+		width:105px;
+		height:40px;
+		margin-left: 8px;
+	}
+	.navbar.navbar-expand-md{background-color: darkorange;
+		margin:0px;
+		padding:1px;}
+	.nav-link{
+		color:white;
+	}
+	.nav-link:hover{
+		background-color: white;
+	}
+	.navbar-collapse{
+		justify-content: flex-end;
+	}
+.form-control{
+	width: 50px;
+	margin-bottom: 20px;
+}
+.feature-title{
+	padding-top: 20px;
+	margin-bottom: 40px;
+}
+.form-group{
+	width:550px;
+	margin-left: 6%;
+}
+.btn {
+      margin-top: 15px;
+      width: 550px;
+      margin-left: 6%; 
+    }
+@media (max-width: 630px) {
+	.form-group{
+	width:90%;
+	margin-left: 6%;}
+	.btn {
+      margin-top: 20px;
+      width: 90%;
+      margin-left: 6%; 
+    }
+}	
+.header label{
+	font-size: 19px;
+	font-style:italic;
+	margin-left:3.5%;
+} 
+
+.radio-inline{
+	margin-left: 30px;
+}
