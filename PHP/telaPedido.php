@@ -44,7 +44,7 @@ $name = $row['nome'];
             <a class="nav-link" href="telaAnuncio.php">Anúncios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="tela">Pedidos</a>
+            <a class="nav-link" href="#">Pedidos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="telaEmprestimo.php">Meus empréstimos</a>
@@ -81,15 +81,15 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
           <div class="dados"><h4>'.$rowLivro['titulo'].'</h4>
             <img class="fotoLivro" src="../Imagens/HoraDaEstrela.jpg">      
             <h5>'.$rowLivro['autor'].'</h5><br> 
-            <h6><b>Data de devolução:</b> <br>'.$row['dt_entrega'].'</h6>
+            <h6><b>Data de devolução:</b> <br><b>'.$row['dt_entrega'].'</h6>
           </div>
           <div class="user">
             <img class="fotoUser" src="../Imagens/FotoUser.png">
             <h5>'.$rowUser['nome']. ' </h5> 
-               <a class="btn btn-light" href="../HTML/fazerPropostaPedido.php?idp='.$idp.'">Fazer proposta</a>          
+               <a class="btn btn-light" href="../PHP/fazerPropostaPedido.php?idp='.$idp.'">Fazer proposta</a>          
           </div>
         </div>';        
-    }}
+    }}else echo '&nbsp&nbsp&nbspNão há pedidos ainda.';
        ?>
     </header>
     </body>

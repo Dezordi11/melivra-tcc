@@ -95,10 +95,10 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
             <div class="user">
                 <img class="fotoUser" src="../Imagens/FotoUser.png">
                 <h5>'.$rowUser['nome'].' </h5>
-                <a class="btn btn-light" href="../PHP/fazerPropostaAnuncio.php?idp='.$idp.'">Fazer proposta</a>
+                <a class="btn btn-light" href="../PHP/telaPropostaAnuncio.php?idp='.$idp.'">Ver propostas</a>
           </div>
         </div>';
-            }}
+            }}else {echo 'Você ainda não realizou pedidos.';}
         ?>
             </div>
             </header>

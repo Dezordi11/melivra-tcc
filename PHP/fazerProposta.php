@@ -1,7 +1,7 @@
 <?php
 session_start();
 $email= $_SESSION['email'];
-if ($_POST['estado'] != NULL and $_POST['entrega'] != NULL){
+if ($_POST['estado'] != NULL and $_POST['autocomplete_search'] != NULL){
     $con = mysqli_connect('localhost','root','', 'mydb');
     if ($con){
         $busca = mysqli_query($con, "SELECT nome FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
@@ -15,7 +15,7 @@ if ($_POST['estado'] != NULL and $_POST['entrega'] != NULL){
         $busca3 = mysqli_query($con, "SELECT * FROM Postagem WHERE idPostagem = '$idPost'") or die(mysqli_error($con));
         $row3 = mysqli_fetch_array($busca3)	;
         $dataPost=$row3['dt_entrega'];
-            $proposta = mysqli_query($con, "INSERT INTO proposta(idUsuario, idPostagem,  local, estadoLivro, dataEntregaInicial) VALUES ('$idUser','".$_GET['idp']."','".$_POST['entrega']."','".$_POST['estado']."','$dataPost')");
+            $proposta = mysqli_query($con, "INSERT INTO proposta(idUsuario, idPostagem,  local, estadoLivro, dataEntregaInicial) VALUES ('$idUser','".$_GET['idp']."','".$_POST['autocomplete_search']."','".$_POST['estado']."','$dataPost')");
             header('Location: telaPedido.php');
     }else die('Sem conexão');
 }else header('Location: telaPedido.php');

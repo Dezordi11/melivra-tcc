@@ -88,8 +88,8 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
             <h5>'.$rowUser['nome'].' </h5> 
             <a class="btn btn-light" href="../PHP/fazerPropostaAnuncio.php?idp='.$idp.'">Fazer proposta</a>
           </div>
-        </div>';        
-    }}
+        </div>';
+    }}else echo '&nbsp&nbsp&nbspNão há anúncios ainda.';
        ?>
     </header>
     </body>
