@@ -74,6 +74,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
       while($row = mysqli_fetch_array($busca2)){
         $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '".$row['idUsuario']."'") or die(mysqli_error($con));
         $rowUser= mysqli_fetch_array($buscaUser) ;
+        $idpr= $row['idProposta'];
         echo '<div class="postagem"> 
           <div class="dados"><br><br><br>
           <h5>&nbsp &nbspData de Devolução Inicial:</h5>
@@ -82,7 +83,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
           <div class="user">
             <img class="fotoUser" src="../Imagens/FotoUser.png">
             <h5>'.$rowUser['nome'].' </h5> 
-            <a class="btn btn-light" href="../PHP/fazerPropostaAnuncio.php?idp='.$idp.'">Fazer proposta</a>
+            <a class="btn btn-light" href="../PHP/fazerEmprestimo.php?idpr='.$idpr.'">Aceitar proposta</a>
           </div>
         </div>';
     }}else echo '&nbsp&nbsp&nbspNão há propostas ainda.';
