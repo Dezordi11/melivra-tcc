@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97bf8534-40df-4efc-80ce-7150b575f028" name="Default Changelist" comment="" />
+    <list default="true" id="97bf8534-40df-4efc-80ce-7150b575f028" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/estiloBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/estiloBase.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerEmprestimo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +32,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/PHP" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\meusprog\melivra-tcc\PHP" />
+      <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\meusprog\melivra-tcc\PHP" />
       <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra\PHP" />
       <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra\HTML" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\meusprog\melivra-tcc\PHP" />
-      <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -57,6 +67,7 @@
       <workItem from="1567880783028" duration="12960000" />
       <workItem from="1568905366773" duration="57269000" />
       <workItem from="1569903475451" duration="11504000" />
+      <workItem from="1569981545532" duration="22120000" />
     </task>
     <servers />
   </component>
@@ -68,7 +79,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

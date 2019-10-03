@@ -81,7 +81,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
           <div class="dados"><h4>'.$rowLivro['titulo'].'</h4>
             <img class="fotoLivro" src="../Imagens/HoraDaEstrela.jpg">      
             <h5>'.$rowLivro['autor'].'</h5><br> 
-            <h6><b>Data de devolução:</b> <br><b>'.$row['dt_entrega'].'</h6>
+            <h5>Data de devolução: <br>'.$row['dt_entrega'].'</h5>
           </div>
           <div class="user">
             <img class="fotoUser" src="../Imagens/FotoUser.png">

@@ -77,7 +77,6 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
 <?php
     if($con){
         $busca2 = mysqli_query($con, "SELECT * FROM postagem WHERE tipo = 'a' and idUsuario =". $idUser . " ORDER BY idPostagem DESC") or die(mysqli_error($con));
-        }
         if(mysqli_num_rows($busca2) > 0 ){
         while($row = mysqli_fetch_array($busca2)){
         $buscaLivro = mysqli_query($con, "SELECT * FROM Livro WHERE idLivro= '".$row['idLivro']."'") or die(mysqli_error($con));
@@ -98,7 +97,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                 <a class="btn btn-light" href="../PHP/telaPropostaAnuncio.php?idp='.$idp.'">Ver propostas</a>
           </div>
         </div>';
-            }}else {echo 'Você ainda não realizou pedidos.';}
+            }}else {echo 'Não há anúncios seus ainda.';}}
         ?>
             </div>
             </header>

@@ -69,14 +69,13 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
       <?php 
   if($con){
     $busca2 = mysqli_query($con, "SELECT * FROM proposta WHERE idPostagem = ". $idp . " ORDER BY idProposta DESC") or die(mysqli_error($con));
-  }     
   if(mysqli_num_rows($busca2) > 0 ){ 
       while($row = mysqli_fetch_array($busca2)){
         $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '".$row['idUsuario']."'") or die(mysqli_error($con));
         $rowUser= mysqli_fetch_array($buscaUser) ;
         $idpr= $row['idProposta'];
         echo '<div class="postagem"> 
-          <div class="dados"><br><br><br>
+          <div class="dados"><h3>&nbsp Proposta</h3><br><br>
           <h5>&nbsp &nbspData de Devolução Inicial:</h5>
             <h5>&nbsp &nbsp'.$row['dataEntregaInicial'].'</h5>
           </div>
@@ -87,6 +86,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
           </div>
         </div>';
     }}else echo '&nbsp&nbsp&nbspNão há propostas ainda.';
+    }
        ?>
     </header>
     </body>
