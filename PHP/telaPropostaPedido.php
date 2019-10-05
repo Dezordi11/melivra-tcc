@@ -1,6 +1,6 @@
     <!DOCTYPE html>
     <head>
-       <title>meLivra - Meus Pedidos</title>
+       <title>meLivra - Propostas</title>
         <link rel="stylesheet" type="text/css" href="../CSS/estiloBase.css">
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +27,7 @@ $name = $row['nome'];
       $busca2 = mysqli_query($con, "SELECT idUsuario FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
       $row2 = mysqli_fetch_array($busca2);
       $idUser = $row2['idUsuario'];
+      $idp=$_GET['idp'];
 }
 ?>
         <script src="../jquery-3.4.1.min.js"></script>
@@ -40,13 +41,13 @@ $name = $row['nome'];
       <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav justify-content-center d-flex flex-fill">
           <li class="nav-item">
-            <a class="nav-link" href="telaAnuncio.php">Anúncios</a>
+            <a class="nav-link" href="#">Anúncios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="telaPedido.php">Pedidos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Meus empréstimos</a>
+            <a class="nav-link" href="telaEmprestimo.php">Meus empréstimos</a>
           </li>
         </ul>
         <ul class="navbar-nav ml:auto">
@@ -62,45 +63,33 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
         </ul>
       </div>
     </nav>
-
-        <div id="wrapper" class="d-flex">
-
-            <div id="sidebar-wrapper" class="bg-light border-right">
-                <div class="sidebar-heading">Meus Pedidos</div>
-                   <div class="list-group list-group-flush">
-                       <a href="telaEmprestimo.php" class="list-group-item list-group-item-action bg-light">Meus Empréstimos</a>
-                       <a href="telaMeusAnuncios.php" class="list-group-item list-group-item-action bg-light">Meus Anúncios</a>
-                   </div>
-            </div>
-            <header class="page-header header container-fluid">
-            <div id="page-content-wrapper">
-        <?php
-        if($con){
-            $busca2 = mysqli_query($con, "SELECT * FROM postagem WHERE tipo ='b' and idUsuario =". $idUser ." ORDER BY idPostagem DESC") or die(mysqli_error($con));
-        }
-        if(mysqli_num_rows($busca2) > 0 ){
-            while($row = mysqli_fetch_array($busca2)){
-                $buscaLivro = mysqli_query($con, "SELECT * FROM Livro WHERE idLivro= '".$row['idLivro']."'") or die(mysqli_error($con));
-                $rowLivro = mysqli_fetch_array($buscaLivro) ;
-                $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '".$row['idUsuario']."'") or die(mysqli_error($con));
-                $rowUser= mysqli_fetch_array($buscaUser) ;
-                $idp= $row['idPostagem'];
-                echo '<div class="postagem"> 
-          <div class="dados"><h4>'.$rowLivro['titulo'].'</h4>
-            <img class="fotoLivro" src="../Imagens/HoraDaEstrela.jpg">      
-            <h5>'.$rowLivro['autor'].'</h5><br> 
-            <h6><b>Data de devolução:</b> <br>'.$row['dt_entrega'].'</h6>
+    <header class="page-header header container-fluid">
+      <h3 class="feature-title">Propostas</h3>
+   <a class="btn btn-light" href="../PHP/telaMeusPedidos.php">Voltar</a>
+      <?php 
+  if($con){
+    $busca2 = mysqli_query($con, "SELECT * FROM proposta WHERE idPostagem = ". $idp . " ORDER BY idProposta DESC") or die(mysqli_error($con));
+  if(mysqli_num_rows($busca2) > 0 ){ 
+      while($row = mysqli_fetch_array($busca2)){
+        $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '".$row['idUsuario']."'") or die(mysqli_error($con));
+        $rowUser= mysqli_fetch_array($buscaUser) ;
+        $idpr= $row['idProposta'];
+        echo '<div class="postagem"> 
+          <div class="dados"><h4>&nbsp Proposta</h4>
+          <h6> Estado do livro:</h6>
+            <h6> &nbsp'.$row['estadoLivro'].'</h6>
+          <h6>Ponto de entrega:</h6>
+            <h6> &nbsp'.$row['local'].'</h6>            
           </div>
           <div class="user">
             <img class="fotoUser" src="../Imagens/FotoUser.png">
-            <h5>'.$rowUser['nome']. ' </h5> 
-               <a class="btn btn-light" href="../PHP/telaPropostaPedido.php?idp='.$idp.'">Ver propostas</a>          
+            <h5>'.$rowUser['nome'].' </h5> 
+            <a class="btn btn-light" href="../PHP/fazerEmprestimoPedido.php?idpr='.$idpr.'">Aceitar proposta</a>
           </div>
         </div>';
-            }}else {echo 'Não há pedidos seus ainda.';}
-        ?>
-            </div>
-        </div>
-</header>
+    }}else echo '&nbsp&nbsp&nbspNão há propostas ainda.';
+    }
+       ?>
+    </header>
     </body>
     </html>

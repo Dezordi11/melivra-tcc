@@ -85,6 +85,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                     $rowPost = mysqli_fetch_array($buscaPost);
                     $buscaLivro = mysqli_query($con, "SELECT * FROM Livro WHERE idLivro= '".$rowPost['idLivro']."'") or die(mysqli_error($con));
                     $rowLivro = mysqli_fetch_array($buscaLivro) ;
+                    $idEmp= $rowEmp['idEmprestimo'];
                     if ($idUser== $rowEmp['idUsuarioA']){
                          $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '".$rowEmp['idUsuarioB']."'") or die(mysqli_error($con));
                          $rowUser= mysqli_fetch_array($buscaUser) ;}
@@ -103,7 +104,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
             <div class="user">
                 <img class="fotoUser" src="../Imagens/FotoUser.png">
                 <h5>'.$rowUser['nome'].' </h5>
-                <a class="btn btn-light" href="../PHP/telaEmprestimoDetalhes.php">Ver detalhes</a>
+                <a class="btn btn-light" href="../PHP/telaEmprestimoDetalhes.php?idEmp='.$idEmp.'">Ver detalhes</a>
           </div>                     
         </div>';
                 }}else {echo 'Não há empréstimos seus ainda.';}

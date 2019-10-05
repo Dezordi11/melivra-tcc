@@ -27,6 +27,7 @@ $name = $row['nome'];
       $busca2 = mysqli_query($con, "SELECT idUsuario FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
       $row2 = mysqli_fetch_array($busca2);
       $idUser = $row2['idUsuario'];
+      $idEmp = $_GET['idEmp'];
 }
 ?>
         <script src="../jquery-3.4.1.min.js"></script>
@@ -66,7 +67,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
 <a class="btn btn-light" href="../PHP/telaEmprestimo.php">Voltar</a>
             <?php
             if($con) {
-                $busca2 = mysqli_query($con, "SELECT * FROM emprestimo WHERE idUsuarioA =" . $idUser . " or IdUsuarioB ='$idUser' ORDER BY idEmprestimo DESC") or die(mysqli_error($con));
+                $busca2 = mysqli_query($con, "SELECT * FROM emprestimo WHERE idEmprestimo ='$idEmp' ORDER BY idEmprestimo DESC") or die(mysqli_error($con));
                 if (mysqli_num_rows($busca2) > 0) {
                     while ($rowEmp = mysqli_fetch_array($busca2)) {
                         $buscaProp = mysqli_query($con, "SELECT * FROM Proposta WHERE idProposta= '" . $rowEmp['idProposta'] . "'") or die(mysqli_error($con));
@@ -82,7 +83,6 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                             $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '" . $rowEmp['idUsuarioA'] . "'") or die(mysqli_error($con));
                             $rowUser = mysqli_fetch_array($buscaUser);
                         }
-                        $idEmp= $rowEmp['idEmprestimo'];
                         $string = $rowLivro['sinopse'];
                         if (strlen($string) > 150) {
                             $stringCut = substr($string, 0, 150);
