@@ -103,8 +103,8 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
             <div class="user">
                 <img class="fotoUser" src="../Imagens/FotoUser.png">
                 <h5>'.$rowUser['nome'].' </h5>
-                <a class="btn btn-light" href="../PHP/telaPropostaAnuncio.php">Ver propostas</a>
-          </div>
+                <a class="btn btn-light" href="../PHP/telaEmprestimoDetalhes.php">Ver detalhes</a>
+          </div>                     
         </div>';
                 }}else {echo 'Não há empréstimos seus ainda.';}
             }

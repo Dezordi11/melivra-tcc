@@ -31,6 +31,10 @@
 	width:550px;
 	margin-left: 6%;
 }
+textarea{
+	width:550px;
+	height:170px;
+}
 .btn {
       margin-top: 15px;
       width: 550px;
