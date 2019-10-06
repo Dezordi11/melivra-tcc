@@ -12,7 +12,7 @@ $idE=$_GET['idEmp'];
             $row2 = mysqli_fetch_array($busca2)	;
             $idUser=$row2['idUsuario'];
             $comentario = mysqli_query($con, "INSERT INTO comentario(idUsuario, idEmprestimo, conteudo, data) VALUES ('$idUser','$idE','".$_POST['conteudo']."', NOW())") or die(mysqli_error($con));
-            header('Location: telaEmprestimoDetalhes.php');
+            header("Location: telaEmprestimoDetalhes.php?idEmp='".$idEmp."'");
     }else die('Sem conexão');
 
 ?>

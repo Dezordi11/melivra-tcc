@@ -76,7 +76,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
         <div id="page-content-wrapper">
             <?php
             if($con){
-                $busca2 = mysqli_query($con, "SELECT * FROM emprestimo WHERE idUsuarioA =". $idUser . " or IdUsuarioB ='$idUser' ORDER BY idEmprestimo DESC") or die(mysqli_error($con));
+                $busca2 = mysqli_query($con, "SELECT * FROM emprestimo WHERE idUsuarioA =". $idUser . " or IdUsuarioB ='$idUser' ORDER BY status") or die(mysqli_error($con));
             if(mysqli_num_rows($busca2) > 0 ){
                 while($rowEmp = mysqli_fetch_array($busca2)){
                     $buscaProp = mysqli_query($con, "SELECT * FROM Proposta WHERE idProposta= '".$rowEmp['idProposta']."'") or die(mysqli_error($con));
@@ -98,7 +98,18 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                 <img class="fotoLivro" src="../Imagens/HoraDaEstrela.jpg">
                 <h6>'.$rowLivro['autor'].'</h6><br>
                 <h6>Data de empréstimo: '.$rowEmp['dataEmprestimo'].'</h6>
-                <h6>Data de Devolução: '.$rowProp['dataEntregaInicial'].'</h6>
+                <h6>Data de Devolução: '.$rowProp['dataEntregaInicial'].'</h6> 
+            ';
+                    date_default_timezone_set('America/Sao_Paulo');
+                    $data= date('Y-m-d');
+                    if($rowProp['dataEntregaInicial']< $data and $rowEmp['status']!='Finalizado'){
+                        $alterar=mysqli_query($con,"UPDATE emprestimo SET status='Atrasado' where idEmprestimo = '$idEmp'") or die(mysqli_error($con));
+                    }else if($rowEmp['status']!='Finalizado'){$alterar=mysqli_query($con,"UPDATE emprestimo SET status='Em andamento' where idEmprestimo = '$idEmp'") or die(mysqli_error($con));}
+                    if(empty($_GET['status2'])){
+                        header('Location:telaEmprestimo.php?status2=1');
+                        exit;
+                    }
+                    echo '
                 <h6>Status: <b>'.$rowEmp['status'].'</b></h6>
             </div>
             <div class="user">

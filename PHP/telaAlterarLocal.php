@@ -18,16 +18,16 @@
     <div class="collapse navbar-collapse" id="main-navigation">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../PHP/telaEmprestimoDetalhes.php">Voltar</a>
+            <?php
+            $idEmp = $_GET['idEmp'];
+            ?>
+          <a class="nav-link" href="../PHP/telaEmprestimoDetalhes.php?idEmp=<?php echo $idEmp; ?>">Voltar</a>
         </li>
       </ul>
     </div>
   </nav>
   <header class="page-header header container-fluid">
     <h3 class="feature-title">Alterar ponto de encontro</h3>
-      <?php
-      $idEmp = $_GET['idEmp'];
-      ?>
 <form method='POST' action="../PHP/alterarLocal.php?idEmp=<?php echo $idEmp; ?>">
     <label>Ponto de Entrega:</label> <br>
     <div class="form-group">

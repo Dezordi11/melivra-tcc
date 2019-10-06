@@ -101,14 +101,25 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                 <h6>' . $rowProp['local'] . '</h6>
                 <h6>Data de Empréstimo: ' . $rowEmp['dataEmprestimo'] . '</h6>
                 <h6>Data de Devolução: ' . $rowProp['dataEntregaInicial'] . '</h6>
+                ';
+                        date_default_timezone_set('America/Sao_Paulo');
+                        $data= date('Y-m-d');
+                        if($rowProp['dataEntregaInicial']< $data and $rowEmp['status']!='Finalizado'){
+                            $alterar=mysqli_query($con,"UPDATE emprestimo SET status='Atrasado' where idEmprestimo = '$idEmp'") or die(mysqli_error($con));
+                        }else if($rowEmp['status']!='Finalizado'){$alterar=mysqli_query($con,"UPDATE emprestimo SET status='Em andamento' where idEmprestimo = '$idEmp'") or die(mysqli_error($con));}
+                        if(empty($_GET['status2'])){
+                            header("Location:telaEmprestimoDetalhes.php?status2=1&idEmp=".$idEmp."");
+                            exit;
+                        }
+                        echo'
                 <h6>Status: <b>' . $rowEmp['status'] . '</b></h6></div>
             </div>
             <div class="user">
                 <img class="fotoUser" src="../Imagens/FotoUser.png">
                 <h5>' . $rowUser['nome'] . ' </h5>
           </div>';
-          if($idUser==$rowEmp['idUsuarioA']){echo '<div>
-                <a class="btn btn-light" href="../PHP/telaPropostaAnuncio.php">Finalizar empréstimo</a>
+          if($idUser==$rowEmp['idUsuarioA'] and $rowEmp['status']!='Finalizado'){echo '<div>
+                <a class="btn btn-light" href="../PHP/finalizarEmprestimo.php?idEmp='.$idEmp.'">Finalizar empréstimo</a>
                 <a class="btn btn-light" href="../PHP/telaAlterarLocal.php?idEmp='.$idEmp.'">Alterar ponto de encontro</a>
                 <a class="btn btn-light" href="../PHP/telaAlterarData.php?idEmp='.$idEmp.'">Alterar data de devolução</a>
                 </div>';}

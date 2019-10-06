@@ -6,6 +6,6 @@ if ($con){
     $row2 = mysqli_fetch_array($busca2)	;
     $idProp=$row2['idProposta'];
     $alterar = mysqli_query($con, "UPDATE proposta SET local='".$_POST['autocomplete_search']."' WHERE idProposta = '$idProp'") or die(mysqli_error($con));
-    header('Location: telaEmprestimoDetalhes.php');
+    header("Location: telaEmprestimoDetalhes.php?idEmp='".$idEmp"'");
 }else die('Sem conexão');
 ?>

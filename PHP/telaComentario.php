@@ -17,17 +17,17 @@
     </button>
     <div class="collapse navbar-collapse" id="main-navigation">
       <ul class="navbar-nav">
+          <?php
+          $idEmp = $_GET['idEmp'];
+          ?>
         <li class="nav-item">
-          <a class="nav-link" href="../PHP/telaEmprestimoDetalhes.php">Voltar</a>
+          <a class="nav-link" href="../PHP/telaEmprestimoDetalhes.php?idEmp=<?php echo $idEmp; ?>">Voltar</a>
         </li>
       </ul>
     </div>
   </nav>
   <header class="page-header header container-fluid">
     <h3 class="feature-title">Escrever mensagem</h3>
-      <?php
-      $idEmp = $_GET['idEmp'];
-      ?>
 <form method='POST' action="../PHP/fazerComentario.php?idEmp=<?php echo $idEmp; ?>">
         <div class="form-group">
             <textarea name="conteudo"></textarea>
