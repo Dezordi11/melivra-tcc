@@ -27,22 +27,22 @@
   <header class="page-header header container-fluid">
     <h3 class="feature-title">Criar conta</h3>
 <form method='POST' action="../PHP/criarConta.php" oninput='senha2.setCustomValidity(senha2.value != senha.value ? "As senhas inseridas não são iguais." : "")'>
-    <div class="form-group">
+    <div class="form-group"><h6>Nome*:</h6>
       <input type="text" class="form-control" placeholder="Nome*" name="nome">
     </div>
-    <div class="form-group">
+    <div class="form-group"><h6>Sobrenome:</h6>
         <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenome">
     </div>
-    <div class="form-group">
+    <div class="form-group"><h6>E-mail*:</h6>
       <input type="email" class="form-control" placeholder="Email*" name="email">
     </div>
-    <div class="form-group">
+    <div class="form-group"><h6>Senha*:</h6>
       <input type="password" class="form-control" placeholder="Senha*" name="senha">
     </div>
-    <div class="form-group">
+    <div class="form-group"><h6>Confirmar senha:</h6>
       <input type="password" class="form-control" placeholder="Confirmar senha" name="senha2">
     </div>      
-    <div class="form-group">
+    <div class="form-group"><h6>Telefone:</h6>
       <input type="text" class="form-control" placeholder="Telefone" name="telefone">
     </div>
     <input type="submit" class="btn btn-secondary" value="Enviar" name="ok">

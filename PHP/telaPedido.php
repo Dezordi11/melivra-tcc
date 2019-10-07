@@ -81,9 +81,16 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
           <div class="dados"><h4>'.$rowLivro['titulo'].'</h4>
             <img class="fotoLivro" src="../Imagens/HoraDaEstrela.jpg">      
             <h5>'.$rowLivro['autor'].'</h5><br> 
-            <h5>Data de devolução: <br>'.$row['dt_entrega'].'</h5>
+            <h6>Data de devolução: <br>'.$row['dt_entrega'].'</h6>
           </div>
-          <div class="user">
+          <div class="user">';
+          $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM Avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
+          $rowNota= mysqli_fetch_array($buscaNota);
+          if (empty($rowNota['media'])){
+              echo '<h6> 0 <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';
+          }else{
+              echo '<h6>'.$rowNota['media'].' <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';}
+          echo '
             <img class="fotoUser" src="../Imagens/FotoUser.png">
             <h5>'.$rowUser['nome']. ' </h5> 
                <a class="btn btn-light" href="../PHP/fazerPropostaPedido.php?idp='.$idp.'">Fazer proposta</a>          

@@ -17,10 +17,10 @@ if ($_POST['livro'] != NULL and $_POST['data'] != NULL){
 				$idUser=$row2['idUsuario'];
 				$idLiv=$row['idLivro'];	
 				$tipo='b';
-				$anuncio = mysqli_query($con, "INSERT INTO postagem(idUsuario, idLivro, dt_entrega, tipo)VALUES('$idUser','".$idLiv."','".$_POST['data']."','$tipo')");
-				header('Location: telaAnuncio.php');
-	  }else header('Location: fazeranuncio.html');
+				$anuncio = mysqli_query($con, "INSERT INTO postagem(idUsuario, idLivro, dt_entrega, tipo)VALUES('$idUser','".$idLiv."','".$_POST['data']."','$tipo')") or die(mysqli_error($con));
+				header('Location: telaPedido.php');
+	  }else header('Location: fazerPedido.php');
 	}else die('Sem conexão');
-}else header('Location: fazeranuncio.html');
+}else header('Location: fazerPedido.php');
 
 ?>
