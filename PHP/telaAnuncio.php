@@ -21,9 +21,10 @@
 
     $con = mysqli_connect('localhost','root','', 'mydb');
   if($con){
-    $busca = mysqli_query($con, "SELECT nome FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
+    $busca = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
   $row = mysqli_fetch_array($busca);
 $name = $row['nome'];
+$foto= $row['imagem'];
       $busca2 = mysqli_query($con, "SELECT idUsuario FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
       $row2 = mysqli_fetch_array($busca2);
       $idUser = $row2['idUsuario'];
@@ -53,7 +54,7 @@ $name = $row['nome'];
           <li class="nav-item">
 <?php           
 echo '<div class="nav-link"><a href="#">'.$name.'</a>        
-<img src="../Imagens/FotoUser.png"></div>'
+<img src="../Imagens/'.$foto.'"></div>'
 ?>
           </li>
           <li class="nav-item">
@@ -91,7 +92,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
         }else{
          echo '<h6>'.$rowNota['media'].' <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';}
         echo '
-            <img class="fotoUser" src="../Imagens/FotoUser.png">
+            <img class="fotoUser" src="../Imagens/'.$rowUser['imagem'].'">
             <h5>'.$rowUser['nome'].' </h5> 
             <a class="btn btn-light" href="../PHP/fazerPropostaAnuncio.php?idp='.$idp.'">Fazer proposta</a>
           </div>

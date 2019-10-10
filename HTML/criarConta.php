@@ -26,12 +26,19 @@
   </nav>
   <header class="page-header header container-fluid">
     <h3 class="feature-title">Criar conta</h3>
-<form method='POST' action="../PHP/criarConta.php" oninput='senha2.setCustomValidity(senha2.value != senha.value ? "As senhas inseridas não são iguais." : "")'>
+<form method='POST' enctype="multipart/form-data" action="../PHP/criarConta.php" oninput='senha2.setCustomValidity(senha2.value != senha.value ? "As senhas inseridas não são iguais." : "")'>
     <div class="form-group"><h6>Nome*:</h6>
       <input type="text" class="form-control" placeholder="Nome*" name="nome">
     </div>
     <div class="form-group"><h6>Sobrenome:</h6>
-        <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenome">
+    <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenome">
+</div>
+    <div class="form-group"><h6>Foto de Perfil:</h6>
+        <input type="file" class="form-control" name="photo">
+        <?php
+        if (empty($erro)){
+            $erro='';
+        }echo $erro; ?>
     </div>
     <div class="form-group"><h6>E-mail*:</h6>
       <input type="email" class="form-control" placeholder="Email*" name="email">

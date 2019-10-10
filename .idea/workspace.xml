@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97bf8534-40df-4efc-80ce-7150b575f028" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Imagens/estrela.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHP/fazerAvaliacao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHP/telaAvaliacao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagens/agostinho.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagens/deuszordi icone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagens/trapala extra - estrela 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagens/trapala extra - moeda.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/estiloBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/estiloBase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/criarConta.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/criarConta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/fazerPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerPedido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/finalizarEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/finalizarEmprestimo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/criarConta.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/criarConta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/telaInicial.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/telaInicial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/criarConta.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/criarConta.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaAnuncio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPedido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
