@@ -24,10 +24,11 @@
     $busca = mysqli_query($con, "SELECT nome FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
   $row = mysqli_fetch_array($busca);
 $name = $row['nome'];
-      $busca2 = mysqli_query($con, "SELECT idUsuario FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
+      $busca2 = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
       $row2 = mysqli_fetch_array($busca2);
       $idUser = $row2['idUsuario'];
       $idEmp = $_GET['idEmp'];
+      $onerro="this.src='../Imagens/fotoUser.png'";
 }
 ?>
         <script src="../jquery-3.4.1.min.js"></script>
@@ -54,7 +55,7 @@ $name = $row['nome'];
           <li class="nav-item">
 <?php           
 echo '<div class="nav-link"><a href="#">'.$name.'</a>        
-<img src="../Imagens/FotoUser.png"></div>'
+            <img src="../Imagens/'.$row2['imagem'].'" onerror='.$onerro.'>'
 ?>
           </li>
           <li class="nav-item">
@@ -122,7 +123,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
         }else{
          echo '<h6>'.$rowNota['media'].' <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';}
         echo '
-                <img class="fotoUser" src="../Imagens/FotoUser.png">
+            <img class="fotoUser" src="../Imagens/'.$rowUser['imagem'].'" onerror='.$onerro.'>
                 <h5>' . $rowUser['nome'] . ' </h5>
           </div>';
           if($idUser==$rowEmp['idUsuarioA'] and $rowEmp['status']!='Finalizado'){echo '<div>
@@ -142,11 +143,17 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                         $rowUser = mysqli_fetch_array($buscaUser);
                         echo '<div class="postagem"> 
           <div class="dados"><h4>Mensagem</h4>
-            <h6>&nbsp' . $row['conteudo'] . '</h6>
+            <h6>&nbsp' . $row['conteudo'] . '</h6> 
             <h6><i>' . $row['data'] . '</i></h6>
           </div>
-          <div class="user">
-            <img class="fotoUser" src="../Imagens/FotoUser.png">
+          <div class="user">';
+        $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM Avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
+        $rowNota= mysqli_fetch_array($buscaNota);
+        if (empty($rowNota['media'])){
+            echo '<h6> 0 <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';
+        }else{
+         echo '<h6>'.$rowNota['media'].' <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';}
+        echo '<img class="fotoUser" src="../Imagens/'.$rowUser['imagem'].'" onerror='.$onerro.'>
             <h5>' . $rowUser['nome'] . ' </h5> 
           </div>
         </div>';

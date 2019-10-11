@@ -24,10 +24,10 @@
     $busca = mysqli_query($con, "SELECT nome FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
   $row = mysqli_fetch_array($busca);
 $name = $row['nome'];
-      $busca2 = mysqli_query($con, "SELECT idUsuario FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
+      $busca2 = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
       $row2 = mysqli_fetch_array($busca2);
       $idUser = $row2['idUsuario'];
-
+     $onerro="this.src='../Imagens/fotoUser.png'";
 }
 ?>
         <script src="../jquery-3.4.1.min.js"></script>
@@ -54,7 +54,7 @@ $name = $row['nome'];
           <li class="nav-item">
 <?php           
 echo '<div class="nav-link"><a href="#">'.$name.'</a>        
-<img src="../Imagens/FotoUser.png"></div>'
+            <img src="../Imagens/'.$row2['imagem'].'" onerror='.$onerro.'>'
 ?>
           </li>
           <li class="nav-item">
@@ -91,7 +91,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
           }else{
               echo '<h6>'.$rowNota['media'].' <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';}
           echo '
-            <img class="fotoUser" src="../Imagens/FotoUser.png">
+            <img class="fotoUser" src="../Imagens/'.$rowUser['imagem'].'" onerror='.$onerro.'>
             <h5>'.$rowUser['nome']. ' </h5> 
                <a class="btn btn-light" href="../PHP/fazerPropostaPedido.php?idp='.$idp.'">Fazer proposta</a>          
           </div>

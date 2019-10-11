@@ -28,6 +28,7 @@ $foto= $row['imagem'];
       $busca2 = mysqli_query($con, "SELECT idUsuario FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
       $row2 = mysqli_fetch_array($busca2);
       $idUser = $row2['idUsuario'];
+  $onerro="this.src='../Imagens/fotoUser.png'";
 }
 ?>
         <script src="../jquery-3.4.1.min.js"></script>
@@ -54,7 +55,7 @@ $foto= $row['imagem'];
           <li class="nav-item">
 <?php           
 echo '<div class="nav-link"><a href="#">'.$name.'</a>        
-<img src="../Imagens/'.$foto.'"></div>'
+<img src="../Imagens/'.$foto.'" onerror='.$onerro.'></div>'
 ?>
           </li>
           <li class="nav-item">
@@ -92,7 +93,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
         }else{
          echo '<h6>'.$rowNota['media'].' <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';}
         echo '
-            <img class="fotoUser" src="../Imagens/'.$rowUser['imagem'].'">
+            <img class="fotoUser" src="../Imagens/'.$rowUser['imagem'].'" onerror='.$onerro.'>
             <h5>'.$rowUser['nome'].' </h5> 
             <a class="btn btn-light" href="../PHP/fazerPropostaAnuncio.php?idp='.$idp.'">Fazer proposta</a>
           </div>
