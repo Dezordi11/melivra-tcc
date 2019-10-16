@@ -85,9 +85,10 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
         $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '".$row['idUsuario']."'") or die(mysqli_error($con));
         $rowUser= mysqli_fetch_array($buscaUser) ;
         $idp= $row['idPostagem'];
+            $onerro1="this.src='../Imagens/HoraDaEstrela.jpg'";
         echo '<div class="postagem">
             <div class="dados"><h4>'.$rowLivro['titulo'].'</h4>
-                <img class="fotoLivro" src="../Imagens/HoraDaEstrela.jpg">
+                <img class="fotoLivro" src="'.$rowLivro['foto'].'" onerror='.$onerro1.'>
                 <h5>'.$rowLivro['autor'].'</h5><br>
                 <h6>'.$row['estadoLivro'].'</h6>
                 <h6>'.$row['local'].'</h6>

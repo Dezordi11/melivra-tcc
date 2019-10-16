@@ -91,11 +91,12 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
 
                             $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                         }
-
+                        
+                        $onerro1="this.src='../Imagens/HoraDaEstrela.jpg'";
                         echo '<div class="container">
             <div class="containerdados">
-            <h4>' . $rowLivro['titulo'] . '</h4>
-                <img class="fotoLivro" src="../Imagens/HoraDaEstrela.jpg"><div>
+                <h4>'.$rowLivro['titulo'].'</h4>
+                <img class="fotoLivro" src="'.$rowLivro['foto'].'" onerror='.$onerro1.'>
                 <h5>' . $rowLivro['autor'] . '</h5><br>
                 <h7><i>' . $string . '...</i></h7><br><br> 
                 <h6>' . $rowPost['estadoLivro'] . '</h6>

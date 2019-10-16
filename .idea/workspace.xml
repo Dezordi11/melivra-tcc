@@ -3,14 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="97bf8534-40df-4efc-80ce-7150b575f028" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerAnuncio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerPedido.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaAnuncio.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPedido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,8 @@
       <workItem from="1568905366773" duration="57269000" />
       <workItem from="1569903475451" duration="11504000" />
       <workItem from="1569981545532" duration="72811000" />
-      <workItem from="1570710055454" duration="10131000" />
+      <workItem from="1570710055454" duration="31560000" />
+      <workItem from="1571201015637" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="Começando tela Detalhe Empréstimos.">
       <created>1570129005051</created>
@@ -109,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570687827210</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fotos de perfil e outros detalhes.">
+      <created>1570813083457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570813083473</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +144,7 @@
     <MESSAGE value="Empréstimos de Pedidos feitos." />
     <MESSAGE value="Status pronto." />
     <MESSAGE value="Tirando erros, faz upload de fotos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tirando erros, faz upload de fotos." />
+    <MESSAGE value="Fotos de perfil e outros detalhes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fotos de perfil e outros detalhes." />
   </component>
 </project>
