@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97bf8534-40df-4efc-80ce-7150b575f028" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Imagens/12002054_1010795205639376_458321092174806977_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagens/IMG-20161018-WA0014.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/fazerAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerAnuncio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerComentario.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerComentario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerEmprestimo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/fazerPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerPedido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaAnuncio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPedido.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +72,8 @@
       <workItem from="1569903475451" duration="11504000" />
       <workItem from="1569981545532" duration="72811000" />
       <workItem from="1570710055454" duration="31560000" />
-      <workItem from="1571201015637" duration="1556000" />
+      <workItem from="1571201015637" duration="1648000" />
+      <workItem from="1571239631239" duration="10573000" />
     </task>
     <task id="LOCAL-00001" summary="Começando tela Detalhe Empréstimos.">
       <created>1570129005051</created>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570813083473</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="API DO GOOGLE BOOKS POARR">
+      <created>1571203467715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571203467715</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +151,7 @@
     <MESSAGE value="Status pronto." />
     <MESSAGE value="Tirando erros, faz upload de fotos." />
     <MESSAGE value="Fotos de perfil e outros detalhes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fotos de perfil e outros detalhes." />
+    <MESSAGE value="API DO GOOGLE BOOKS POARR" />
+    <option name="LAST_COMMIT_MESSAGE" value="API DO GOOGLE BOOKS POARR" />
   </component>
 </project>

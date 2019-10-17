@@ -23,8 +23,18 @@ if ($_POST['livro'] != NULL and $_POST['estado'] != NULL and $_POST['autocomplet
 	    if($dadosApi['totalItems']>0) {
 	        if($dadosApi['items'][0]['volumeInfo']){
 	            $titulo=$dadosApi['items'][0]['volumeInfo']['title'];
-	            $sinopse=$dadosApi['items'][0]['volumeInfo']['description'];
-	            $autores=implode(', ', $dadosApi['items'][0]['volumeInfo']['authors']);
+	            if(empty($dadosApi['items'][0]['volumeInfo']['description'])){
+	                $sinopse= 'Não definido';
+                }else if (!empty($dadosApi['items'][0]['volumeInfo']['description']))
+                {
+                    $sinopse=$dadosApi['items'][0]['volumeInfo']['description'];
+                }
+                if(empty($dadosApi['items'][0]['volumeInfo']['authors'])){
+                    $autores= 'Não definido';
+                }else if (!empty($dadosApi['items'][0]['volumeInfo']['authors']))
+                {
+                    $autores=implode(', ', $dadosApi['items'][0]['volumeInfo']['authors']);
+                }
 	            $foto=$dadosApi['items'][0]['volumeInfo']['imageLinks']['thumbnail'];
 
 	            $busca = mysqli_query($con, "SELECT * FROM Livro WHERE titulo = '$titulo'") or die(mysqli_error($con));
@@ -51,6 +61,6 @@ if ($_POST['livro'] != NULL and $_POST['estado'] != NULL and $_POST['autocomplet
 				header('Location: telaAnuncio.php');
 	         }//else header('Location: ../HTML/fazeranuncio.html');
 	}else die('Sem conexão');
-}//else header('Location: ../HTML/fazerAnuncio.html');
+}else header('Location: ../HTML/fazeranuncio.html');
 
 ?>

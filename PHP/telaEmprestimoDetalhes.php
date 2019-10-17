@@ -29,7 +29,9 @@ $name = $row['nome'];
       $idUser = $row2['idUsuario'];
       $idEmp = $_GET['idEmp'];
       $onerro="this.src='../Imagens/fotoUser.png'";
-}
+      $onerro1="this.src='../Imagens/HoraDaEstrela.jpg'";
+
+  }
 ?>
         <script src="../jquery-3.4.1.min.js"></script>
         <script src="../bootstrap/js/bootstrap.min.js"></script>
@@ -91,8 +93,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
 
                             $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                         }
-                        
-                        $onerro1="this.src='../Imagens/HoraDaEstrela.jpg'";
+
                         echo '<div class="container">
             <div class="containerdados">
                 <h4>'.$rowLivro['titulo'].'</h4>
@@ -114,7 +115,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                             exit;
                         }
                         echo'
-                <h6>Status: <b>' . $rowEmp['status'] . '</b></h6></div>
+                <h6>Status: <b>' . $rowEmp['status'] . '</b></h6>
             </div>
             <div class="user">';
         $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM Avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
