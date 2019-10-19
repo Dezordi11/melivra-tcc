@@ -7,7 +7,12 @@ $idEmp=$_GET['idEmp'];
         $busca = mysqli_query($con, "SELECT * FROM emprestimo WHERE idEmprestimo = '$idEmp'") or die(mysqli_error($con));
         $row = mysqli_fetch_array($busca);
         $user = $row['idUsuarioB'];
-            $avaliacao = mysqli_query($con, "INSERT INTO avaliacao(idUsuario, texto, nota) VALUES ('$user','".$_POST['conteudo']."','".$_POST['nota']."')") or die(mysqli_error($con));
+        if($_POST['nota']==0){
+            $tipo='d';
+        }else{
+            $tipo='a';
+        }
+            $avaliacao = mysqli_query($con, "INSERT INTO avaliacao(idUsuario, texto, nota, tipo) VALUES ('$user','".$_POST['conteudo']."','".$_POST['nota']."','$tipo')") or die(mysqli_error($con));
             header("Location: telaEmprestimoDetalhes.php?idEmp=".$idEmp."");
     }else die('Sem conexão');
 

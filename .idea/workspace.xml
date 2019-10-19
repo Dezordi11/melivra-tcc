@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97bf8534-40df-4efc-80ce-7150b575f028" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/telaDenuncias.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerAvaliacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerAvaliacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaAnuncio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaAvaliacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaAvaliacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusPedidos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,14 +41,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\meusprog\melivra-tcc\PHP" />
-      <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\meusprog\melivra-tcc\PHP" />
       <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra\PHP" />
       <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra\HTML" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\meusprog\melivra-tcc\PHP" />
+      <recent name="C:\xampp\htdocs\meusprog\TCC - meLivra" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -67,7 +79,7 @@
       <workItem from="1569981545532" duration="72811000" />
       <workItem from="1570710055454" duration="31560000" />
       <workItem from="1571201015637" duration="1648000" />
-      <workItem from="1571239631239" duration="12180000" />
+      <workItem from="1571239631239" duration="23009000" />
     </task>
     <task id="LOCAL-00001" summary="Começando tela Detalhe Empréstimos.">
       <created>1570129005051</created>
@@ -125,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571274709851</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Composer.json adicionado">
+      <created>1571279600119</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571279600282</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +173,18 @@
     <MESSAGE value="Fotos de perfil e outros detalhes." />
     <MESSAGE value="API DO GOOGLE BOOKS POARR" />
     <MESSAGE value="Prestes a hostear." />
-    <option name="LAST_COMMIT_MESSAGE" value="Prestes a hostear." />
+    <MESSAGE value="Composer.json adicionado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Composer.json adicionado" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php</url>
+          <line>153</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

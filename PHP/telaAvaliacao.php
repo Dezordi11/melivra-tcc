@@ -35,6 +35,8 @@
         <input type="radio" class="radio-inline" name="nota" value=3> 3
         <input type="radio" class="radio-inline" name="nota" value=4> 4
         <input type="radio" class="radio-inline" name="nota" value=5> 5
+        <input type="radio" class="radio-inline" name="nota" value=0> Denunciar
+
     </div>
     <div class="form-group"><h5>Avaliação:</h5>
             <textarea name="conteudo"></textarea>

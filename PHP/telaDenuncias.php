@@ -1,6 +1,6 @@
     <!DOCTYPE html>
     <head>
-       <title>meLivra - Anúncios</title>
+       <title>meLivra - Propostas</title>
         <link rel="stylesheet" type="text/css" href="../CSS/estiloBase.css">
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,14 +21,13 @@
 
     $con = mysqli_connect('localhost','root','', 'mydb');
   if($con){
-    $busca = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
+    $busca = mysqli_query($con, "SELECT nome FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
   $row = mysqli_fetch_array($busca);
 $name = $row['nome'];
-$foto= $row['imagem'];
-      $busca2 = mysqli_query($con, "SELECT idUsuario FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
+      $busca2 = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
       $row2 = mysqli_fetch_array($busca2);
       $idUser = $row2['idUsuario'];
-  $onerro="this.src='../Imagens/fotoUser.png'";
+      $onerro="this.src='../Imagens/fotoUser.png'";
 }
 ?>
         <script src="../jquery-3.4.1.min.js"></script>
@@ -42,7 +41,7 @@ $foto= $row['imagem'];
       <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav justify-content-center d-flex flex-fill">
           <li class="nav-item">
-            <a class="nav-link" href="#">Anúncios</a>
+            <a class="nav-link" href="telaAnuncio.php">Anúncios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="telaPedido.php">Pedidos</a>
@@ -54,14 +53,14 @@ $foto= $row['imagem'];
             if($name=='admin'){
                 echo'
             <li class="nav-item">
-                <a class="nav-link" href="telaDenuncias.php">Denúncias</a>
+                <a class="nav-link" href="#">Denúncias</a>
             </li>';}?>
         </ul>
         <ul class="navbar-nav ml:auto">
           <li class="nav-item">
 <?php           
 echo '<div class="nav-link"><a href="#">'.$name.'</a>        
-<img src="../Imagens/'.$foto.'" onerror='.$onerro.'></div>'
+            <img src="../Imagens/'.$row2['imagem'].'" onerror='.$onerro.'>'
 ?>
           </li>
           <li class="nav-item">
@@ -71,26 +70,20 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
       </div>
     </nav>
     <header class="page-header header container-fluid">
-      <h3 class="feature-title">Anúncios</h3>
-   <a class="btn btn-light" href="../HTML/fazeranuncio.html">Fazer anúncio</a>
+      <h3 class="feature-title">Denúncias</h3>
+   <a class="btn btn-light" href="../PHP/telaMeusAnuncios.php">Voltar</a>
       <?php 
   if($con){
-    $busca2 = mysqli_query($con, "SELECT * FROM postagem WHERE tipo = 'a' and idUsuario !=". $idUser . " ORDER BY idPostagem DESC") or die(mysqli_error($con));
-  }     
+    $busca2 = mysqli_query($con, "SELECT * FROM avaliacao WHERE tipo = 'd' ORDER BY idAvaliacao DESC") or die(mysqli_error($con));
   if(mysqli_num_rows($busca2) > 0 ){ 
       while($row = mysqli_fetch_array($busca2)){
-        $buscaLivro = mysqli_query($con, "SELECT * FROM Livro WHERE idLivro= '".$row['idLivro']."'") or die(mysqli_error($con));
-        $rowLivro = mysqli_fetch_array($buscaLivro) ; 
         $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '".$row['idUsuario']."'") or die(mysqli_error($con));
         $rowUser= mysqli_fetch_array($buscaUser) ;
-          $idp= $row['idPostagem'];
-          $onerro1="this.src='../Imagens/HoraDaEstrela.jpg'";
-          echo '<div class="postagem">
-            <div class="dados"><h4>'.$rowLivro['titulo'].'</h4>
-                <img class="fotoLivro" src="'.$rowLivro['foto'].'" onerror='.$onerro1.'>  
-            <h5>'.$rowLivro['autor'].'</h5><br>
-            <h6>'.$row['estadoLivro'].'</h6>
-            <h6>'.$row['local'].'</h6>
+        $idpr= $row['idAvaliacao'];
+        echo '<div class="postagem"> 
+          <div class="dados"><h3> Denúncia</h3><br>
+          <h5>&nbsp  Nota: '.$row['nota'].'/5</h5>
+            <h5> &nbsp "'.$row['texto'].'"</h5>
           </div>
           <div class="user">';
         $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM Avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
@@ -101,11 +94,13 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
          echo '<h6>'.$rowNota['media'].' <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';}
         echo '
             <img class="fotoUser" src="../Imagens/'.$rowUser['imagem'].'" onerror='.$onerro.'>
+
             <h5>'.$rowUser['nome'].' </h5> 
-            <a class="btn btn-light" href="../PHP/fazerPropostaAnuncio.php?idp='.$idp.'">Fazer proposta</a>
+            <a class="btn btn-light" href="../PHP/fazerEmprestimo.php?idpr='.$idpr.'">Banir usuário</a>
           </div>
         </div>';
-    }}else echo '&nbsp&nbsp&nbspNão há anúncios ainda.';
+    }}else echo '&nbsp&nbsp&nbspNão há propostas ainda.';
+    }
        ?>
     </header>
     </body>

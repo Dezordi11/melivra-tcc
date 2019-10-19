@@ -49,6 +49,12 @@ $name = $row['nome'];
           <li class="nav-item">
             <a class="nav-link" href="#">Meus empréstimos</a>
           </li>
+            <?php
+            if($name=='admin'){
+                echo'
+            <li class="nav-item">
+                <a class="nav-link" href="telaDenuncias.php">Denúncias</a>
+            </li>';}?>
         </ul>
         <ul class="navbar-nav ml:auto">
           <li class="nav-item">
