@@ -1,4 +1,8 @@
-    <!DOCTYPE html>
+<?php
+session_start();
+ob_start();
+
+?>    <!DOCTYPE html>
     <head>
        <title>meLivra - Meus Empréstimos</title>
         <link rel="stylesheet" type="text/css" href="../CSS/estiloBase.css">
@@ -9,7 +13,6 @@
 
     <body>
 <?php
-  session_start();
   if($_SESSION['email'])
     $email= $_SESSION['email'];
   else header('Location: ../HTML/telaInicial.html');
@@ -19,7 +22,7 @@
   unset($_SESSION['nome']);
   header('Location: ../HTML/telaInicial.html');}
 
-    $con = mysqli_connect('localhost','root','', 'mydb');
+    $con = mysqli_connect('localhost','id11285427_dezordi','00112233', 'id11285427_melivra');
   if($con){
     $busca = mysqli_query($con, "SELECT nome FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
   $row = mysqli_fetch_array($busca);
@@ -79,17 +82,17 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                 $busca2 = mysqli_query($con, "SELECT * FROM emprestimo WHERE idEmprestimo ='$idEmp' ORDER BY idEmprestimo DESC") or die(mysqli_error($con));
                 if (mysqli_num_rows($busca2) > 0) {
                     while ($rowEmp = mysqli_fetch_array($busca2)) {
-                        $buscaProp = mysqli_query($con, "SELECT * FROM Proposta WHERE idProposta= '" . $rowEmp['idProposta'] . "'") or die(mysqli_error($con));
+                        $buscaProp = mysqli_query($con, "SELECT * FROM proposta WHERE idProposta= '" . $rowEmp['idProposta'] . "'") or die(mysqli_error($con));
                         $rowProp = mysqli_fetch_array($buscaProp);
-                        $buscaPost = mysqli_query($con, "SELECT * FROM Postagem WHERE idPostagem= '" . $rowProp['idPostagem'] . "'") or die(mysqli_error($con));
+                        $buscaPost = mysqli_query($con, "SELECT * FROM postagem WHERE idPostagem= '" . $rowProp['idPostagem'] . "'") or die(mysqli_error($con));
                         $rowPost = mysqli_fetch_array($buscaPost);
-                        $buscaLivro = mysqli_query($con, "SELECT * FROM Livro WHERE idLivro= '" . $rowPost['idLivro'] . "'") or die(mysqli_error($con));
+                        $buscaLivro = mysqli_query($con, "SELECT * FROM livro WHERE idLivro= '" . $rowPost['idLivro'] . "'") or die(mysqli_error($con));
                         $rowLivro = mysqli_fetch_array($buscaLivro);
                         if ($idUser == $rowEmp['idUsuarioA']) {
-                            $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '" . $rowEmp['idUsuarioB'] . "'") or die(mysqli_error($con));
+                            $buscaUser = mysqli_query($con, "SELECT * FROM usuario WHERE idUsuario = '" . $rowEmp['idUsuarioB'] . "'") or die(mysqli_error($con));
                             $rowUser = mysqli_fetch_array($buscaUser);
                         } else {
-                            $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '" . $rowEmp['idUsuarioA'] . "'") or die(mysqli_error($con));
+                            $buscaUser = mysqli_query($con, "SELECT * FROM usuario WHERE idUsuario = '" . $rowEmp['idUsuarioA'] . "'") or die(mysqli_error($con));
                             $rowUser = mysqli_fetch_array($buscaUser);
                         }
                         $string = $rowLivro['sinopse'];
@@ -124,7 +127,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                 <h6>Status: <b>' . $rowEmp['status'] . '</b></h6>
             </div>
             <div class="user">';
-        $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM Avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
+        $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
         $rowNota= mysqli_fetch_array($buscaNota);
         if (empty($rowNota['media'])){
             echo '<h6> 0 <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';
@@ -147,7 +150,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
                 $busca2 = mysqli_query($con, "SELECT * FROM comentario WHERE idEmprestimo = " . $idEmp . " ORDER BY idComentario DESC") or die(mysqli_error($con));
                 if (mysqli_num_rows($busca2) > 0) {
                     while ($row = mysqli_fetch_array($busca2)) {
-                        $buscaUser = mysqli_query($con, "SELECT * FROM Usuario WHERE idUsuario = '" . $row['idUsuario'] . "'") or die(mysqli_error($con));
+                        $buscaUser = mysqli_query($con, "SELECT * FROM usuario WHERE idUsuario = '" . $row['idUsuario'] . "'") or die(mysqli_error($con));
                         $rowUser = mysqli_fetch_array($buscaUser);
                         echo '<div class="postagem"> 
           <div class="dados"><h4>Mensagem</h4>
@@ -155,7 +158,7 @@ echo '<div class="nav-link"><a href="#">'.$name.'</a>
             <h6><i>' . $row['data'] . '</i></h6>
           </div>
           <div class="user">';
-        $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM Avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
+        $buscaNota = mysqli_query($con, "SELECT ROUND(AVG(nota),1) AS media FROM avaliacao WHERE idUsuario ='".$rowUser['idUsuario']."'") or die(mysqli_error($con));
         $rowNota= mysqli_fetch_array($buscaNota);
         if (empty($rowNota['media'])){
             echo '<h6> 0 <img class="fotoEstrela" src="../Imagens/estrela.png"></h6>';

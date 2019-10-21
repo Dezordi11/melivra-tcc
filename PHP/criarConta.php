@@ -1,14 +1,16 @@
 <?php
 session_start();
+ob_start();
+
 if(isset($_SESSION['email'])) {
     header('Location: telaAnuncio.php');
     die();}
 
 $email = $_POST['email'];
 if ($_POST['email'] != NULL and $_POST['senha'] != NULL and $_POST['nome'] != NULL and $_POST['senha2'] != NULL){
-	$con = mysqli_connect('localhost','root','', 'mydb');
+	$con = mysqli_connect('localhost','id11285427_dezordi','00112233', 'id11285427_melivra');
 	if ($con){
-			$busca = mysqli_query($con, "SELECT * FROM Usuario WHERE email = '$email'") or die(mysqli_error($con));
+			$busca = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
 			$num = mysqli_num_rows($busca); 
 			if($num<=0){
                 $targeta = "../Imagens/";

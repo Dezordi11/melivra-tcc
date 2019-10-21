@@ -1,12 +1,14 @@
 <?php
 session_start();
+ob_start();
+
 $email= $_SESSION['email'];
 $idpr=$_GET['idpr'];
-	$con = mysqli_connect('localhost','root','', 'mydb');
+	$con = mysqli_connect('localhost','id11285427_dezordi','00112233', 'id11285427_melivra');
 	if ($con){
 		 $busca = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
 		  $row = mysqli_fetch_array($busca);
-			$busca2 = mysqli_query($con, "SELECT * FROM Proposta WHERE idProposta = '$idpr'") or die(mysqli_error($con));
+			$busca2 = mysqli_query($con, "SELECT * FROM proposta WHERE idProposta = '$idpr'") or die(mysqli_error($con));
 			$num = mysqli_num_rows($busca2);
 			if($num>0){
 				$row2 = mysqli_fetch_array($busca2);

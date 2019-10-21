@@ -2,12 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97bf8534-40df-4efc-80ce-7150b575f028" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PHP/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHP/telaDenuncias.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagens/curriculo foto jpeg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Imagens/jim2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mydb.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/estiloBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/estiloBase.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/fazerPedido.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/fazerPedido.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/fazeranuncio.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/fazeranuncio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/alterarData.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/alterarData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/alterarLocal.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/alterarLocal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/criarConta.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/criarConta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerAnuncio.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/fazerAvaliacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerAvaliacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerComentario.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerComentario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerEmprestimo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerEmprestimoPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerEmprestimoPedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerPedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerProposta.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerProposta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerProposta2.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerProposta2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/fazerPropostaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fazerPropostaPedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/finalizarEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/finalizarEmprestimo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaAnuncio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/telaAvaliacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaAvaliacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/telaDenuncias.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaDenuncias.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimo.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaMeusAnuncios.php" afterDir="false" />
@@ -15,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/PHP/telaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPedido.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaAnuncio.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/telaPropostaPedido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +43,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,6 +93,11 @@
       </list>
     </option>
   </component>
+  <component name="StructuralSearchPlugin">
+    <replaceConfiguration name="user defined" created="1571528464485" text="session_start" recursive="false" caseInsensitive="true" type="PHP" scope_type="NAMED" scope_descriptor="All Places" reformatAccordingToStyle="false" shortenFQN="false" replacement="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </replaceConfiguration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -79,7 +114,7 @@
       <workItem from="1569981545532" duration="72811000" />
       <workItem from="1570710055454" duration="31560000" />
       <workItem from="1571201015637" duration="1648000" />
-      <workItem from="1571239631239" duration="23009000" />
+      <workItem from="1571239631239" duration="35279000" />
     </task>
     <task id="LOCAL-00001" summary="Começando tela Detalhe Empréstimos.">
       <created>1570129005051</created>
@@ -144,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571279600282</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="tela Denúncias feita">
+      <created>1571521137632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571521137685</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,14 +216,16 @@
     <MESSAGE value="API DO GOOGLE BOOKS POARR" />
     <MESSAGE value="Prestes a hostear." />
     <MESSAGE value="Composer.json adicionado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Composer.json adicionado" />
+    <MESSAGE value="tela Denúncias feita" />
+    <MESSAGE value="Varias alterações feitas para hostear" />
+    <option name="LAST_COMMIT_MESSAGE" value="Varias alterações feitas para hostear" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/PHP/telaEmprestimoDetalhes.php</url>
-          <line>153</line>
+          <line>156</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

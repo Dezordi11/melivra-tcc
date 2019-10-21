@@ -30,7 +30,7 @@
       $idp = $_GET['idp'];
       ?>
 <form method='POST' action="../PHP/fazerProposta.php?idp=<?php echo $idp; ?>">
-    <label>Estado do Livro:</label> <br>
+    <label>Estado do livro:</label> <br>
     <div class="form-group">
         <input type="radio" class="radio-inline" name="estado" value="Perfeito estado"> Perfeito estado
         <input type="radio" class="radio-inline" name="estado" value="Levemente danificado"> Levemente danificado

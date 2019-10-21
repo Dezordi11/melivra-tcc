@@ -1,8 +1,10 @@
 <?php
 session_start();
+ob_start();
+
 $email= $_SESSION['email'];
 $idEmp=$_GET['idEmp'];
-    $con = mysqli_connect('localhost','root','', 'mydb');
+    $con = mysqli_connect('localhost','id11285427_dezordi','00112233', 'id11285427_melivra');
     if ($con){
         $busca = mysqli_query($con, "SELECT * FROM emprestimo WHERE idEmprestimo = '$idEmp'") or die(mysqli_error($con));
         $row = mysqli_fetch_array($busca);

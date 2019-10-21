@@ -1,12 +1,15 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<?php
+session_start();
+ob_start();
+
+?> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="../jquery-3.4.1.min.js"></script>
 
 <?php
-session_start();
 $email= $_SESSION['email'];
 $nome = $_POST['livro'];
 if ($_POST['livro'] != NULL and $_POST['estado'] != NULL and $_POST['autocomplete_search'] != NULL){
-	$con = mysqli_connect('localhost','root','', 'mydb');
+	$con = mysqli_connect('localhost','id11285427_dezordi','00112233', 'id11285427_melivra');
 	if ($con){
 	    $nome2 = str_replace(' ','+',$nome);
 
@@ -37,7 +40,7 @@ if ($_POST['livro'] != NULL and $_POST['estado'] != NULL and $_POST['autocomplet
                 }
 	            $foto=$dadosApi['items'][0]['volumeInfo']['imageLinks']['thumbnail'];
 
-	            $busca = mysqli_query($con, "SELECT * FROM Livro WHERE titulo = '$titulo'") or die(mysqli_error($con));
+	            $busca = mysqli_query($con, "SELECT * FROM livro WHERE titulo = '$titulo'") or die(mysqli_error($con));
                 $num = mysqli_num_rows($busca);
                 if($num<=0) {
                     $crialivro = mysqli_query($con, "INSERT INTO livro(titulo, autor, sinopse, foto)VALUES('$titulo','$autores','$sinopse','$foto')");
@@ -48,11 +51,11 @@ if ($_POST['livro'] != NULL and $_POST['estado'] != NULL and $_POST['autocomplet
 		 $busca = mysqli_query($con, "SELECT nome FROM usuario WHERE email = '$email'") or die(mysqli_error($con));
 		  $row = mysqli_fetch_array($busca);
 		$user = $row['nome'];
-			$busca = mysqli_query($con, "SELECT * FROM Livro WHERE titulo = '$titulo'") or die(mysqli_error($con));
+			$busca = mysqli_query($con, "SELECT * FROM livro WHERE titulo = '$titulo'") or die(mysqli_error($con));
 			$num = mysqli_num_rows($busca); 
 			if($num>0){
 				$row = mysqli_fetch_array($busca);
-				$busca2 = mysqli_query($con, "SELECT * FROM Usuario WHERE nome = '$user'") or die(mysqli_error($con));
+				$busca2 = mysqli_query($con, "SELECT * FROM usuario WHERE nome = '$user'") or die(mysqli_error($con));
 				$row2 = mysqli_fetch_array($busca2)	;	
 				$idUser=$row2['idUsuario'];
 				$idLiv=$row['idLivro'];	
